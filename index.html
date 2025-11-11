@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Technologies Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Registration Form -->
+    <div id="registrationForm" class="container">
+        <div class="form-container">
+            <h1>Welcome to Web Technologies Quiz</h1>
+            <p>Test your knowledge of HTML, CSS, and JavaScript</p>
+            <form id="userForm">
+                <div class="input-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" required placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" required placeholder="Enter your email address">
+                </div>
+                <button type="submit" class="btn btn-primary">Start Quiz</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quiz Container -->
+    <div id="quizContainer" class="container hidden">
+        <div class="quiz-header">
+            <h2>Web Technologies Quiz</h2>
+            <div class="user-info">
+                <span id="displayName"></span>
+                <span class="question-counter">Question <span id="currentQuestionNum">1</span> of 20</span>
+            </div>
+        </div>
+        
+        <div class="quiz-body">
+            <div class="question-container">
+                <h3 id="questionText"></h3>
+                <div id="optionsContainer" class="options-container"></div>
+            </div>
+        </div>
+
+        <div class="quiz-footer">
+            <button id="prevBtn" class="btn btn-secondary" disabled>Previous</button>
+            <button id="nextBtn" class="btn btn-primary">Next</button>
+            <button id="submitBtn" class="btn btn-success hidden">Submit Quiz</button>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div id="resultsContainer" class="container hidden">
+        <div class="results-content">
+            <div class="congratulations">
+                <h1>🎉 Congratulations!</h1>
+                <p>You have completed the quiz!</p>
+                <div class="score-display">
+                    <h2>Your Score: <span id="finalScore">0</span>/20</h2>
+                    <p>Percentage: <span id="percentage">0</span>%</p>
+                </div>
+                <div class="download-section">
+                    <button id="downloadBtn" class="btn btn-download">Download Score Card</button>
+                    <p id="downloadMessage" class="download-message hidden"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
